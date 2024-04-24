@@ -11,18 +11,13 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Server at http://localhost:${port}`);
 });
-app.get('/jokes',(req, res) => {
+app.get('/api/jokes',(req, res) => {
     const joke = [
         {
             id: 1,
             title: 'A joke',
             constent: 'This is a joke'
 
-        },
-        {
-            id: 2,
-            title: 'A joke',
-            constent: 'This is a second joke'
         },
         {
             id: 2,
@@ -37,9 +32,22 @@ app.get('/jokes',(req, res) => {
         {
             id: 4,
             title: 'A joke',
-            constent: 'This is a forth  joke'
+            constent: 'This is a forth joke'
+        },
+        {
+            id: 5,
+            title: 'A joke',
+            constent: 'This is a fifth joke'
         },
     ];
     res.send(joke);
+});
+
+app.get('/backend',(req,res) => {
+  res.send("I am Building Backend App");
+});
+
+app.get('/dsa',(req,res)=>{
+    res.send("I have to master DSA next");
 });
 
