@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-    console.log(`Server at http://localhost:${port}`);
+    console.log(`Server is serving at http://localhost:${port}`);
 });
 app.get('/api/jokes',(req, res) => {
     const joke = [
